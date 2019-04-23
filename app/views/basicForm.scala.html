@@ -1,0 +1,14 @@
+@import helper._
+
+@(userForm: Form[BasicForm])(implicit messages: Messages)
+
+@main("Scala Play forms tutorial") {
+    <h1>Scala Play forms tutorial</h1>
+
+    @form(action = routes.HomeController.simpleFormPost()) {
+        @textarea(userForm("inputs"))
+        @inputText(userForm("verbosity"))
+
+        <input type="submit" value="Submit">
+    }
+}
