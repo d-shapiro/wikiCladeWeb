@@ -6,7 +6,7 @@
 GET     /                           controllers.HomeController.wikiCladeForm
 
 +nocsrf
-POST    /simpleForm                 controllers.HomeController.wikiCladeFormPost
+POST    /                           controllers.HomeController.wikiCladeFormPost
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
