@@ -1,0 +1,14 @@
+@import helper._
+
+@(userForm: Form[WikiCladeForm])(implicit messages: Messages)
+
+@main("WikiClade") {
+    <h1>WikiClade</h1>
+
+    @form(action = routes.HomeController.wikiCladeFormPost()) {
+        @textarea(userForm("inputs"))
+        @inputText(userForm("verbosity"))
+
+        <input type="submit" value="Generate Cladogram">
+    }
+}

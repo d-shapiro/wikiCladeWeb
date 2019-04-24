@@ -14,6 +14,6 @@ scalaVersion := "2.12.2"
 
 libraryDependencies ++= Seq( jdbc , ehcache , ws , specs2 % Test , guice )
 
-libraryDependencies += "com.github.d-shapiro" % "wikiClade" % "dd72bd0840"
+libraryDependencies += "com.github.d-shapiro" % "wikiClade" % "1.0.3"
 
 unmanagedResourceDirectories in Test <+=  baseDirectory ( _ /"target/web/public/test" )  

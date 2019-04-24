@@ -20,23 +20,23 @@ class HomeController @Inject()(cc: ControllerComponents) extends AbstractControl
    * will be called when the application receives a `GET` request with
    * a path of `/`.
    */
-  def index = Action {
-    Ok(views.html.index("Your new application is ready."))
+//  def index = Action {
+//    Ok(views.html.index("Your new application is ready."))
+//  }
+//
+//  def hello(name: String) = Action {
+//    Ok(views.html.hello(name))
+//  }
+//
+  def wikiCladeForm() = Action {  implicit request: Request[AnyContent] =>
+    Ok(views.html.wikiCladeForm(WikiCladeForm.form.fill(WikiCladeForm("Cat, Dog, Pigeon", 50))))
   }
 
-  def hello(name: String) = Action {
-    Ok(views.html.hello(name))
-  }
-
-  def simpleForm() = Action {  implicit request: Request[AnyContent] =>
-    Ok(views.html.basicForm(BasicForm.form.fill(BasicForm("Cat, Dog, Pigeon", 50))))
-  }
-
-  def simpleFormPost() = Action { implicit request =>
-    BasicForm.form.bindFromRequest.fold(
+  def wikiCladeFormPost() = Action { implicit request: Request[AnyContent] =>
+    WikiCladeForm.form.bindFromRequest.fold(
       formWithErrors => {
         // binding failure, you retrieve the form containing errors:
-        BadRequest(views.html.basicForm(formWithErrors))
+        BadRequest(views.html.wikiCladeForm(formWithErrors))
       },
       formData => {
         val inpList: List[String] = formData.inputs.split(",").map(_.trim).toList
