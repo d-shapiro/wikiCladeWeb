@@ -29,7 +29,7 @@ class HomeController @Inject()(cc: ControllerComponents) extends AbstractControl
 //  }
 //
   def wikiCladeForm() = Action {  implicit request: Request[AnyContent] =>
-    Ok(views.html.wikiCladeForm(WikiCladeForm.form.fill(WikiCladeForm("Cat, Dog, Pigeon", 50))))
+    Ok(views.html.wikiCladeForm(WikiCladeForm.form.fill(WikiCladeForm("Cat, Dog, Pigeon", 30))))
   }
 
   def wikiCladeFormPost() = Action { implicit request: Request[AnyContent] =>
