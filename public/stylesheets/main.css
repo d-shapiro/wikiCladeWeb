@@ -13,23 +13,18 @@ hr{display:none;visibility:hidden;}
 :focus{outline:0;}
 h1,h2,h3,h4,h5,h6{color:#333;font-weight:bold;line-height:1.25;margin-top:1.3em;}
 h1 a,h2 a,h3 a,h4 a,h5 a,h6 a{font-weight:inherit;color:#333;}h1 a:hover,h2 a:hover,h3 a:hover,h4 a:hover,h5 a:hover,h6 a:hover{color:#333;}
-h1{font-family:"Trebuchet MS", Helvetica, sans-serif;font-style:italic;font-size:36px;margin:0 0 18px;border-bottom:4px solid #eee;}
+h1{font-family:"Trebuchet MS", Helvetica, sans-serif;font-style:italic;font-size:36px;margin:0 0 18px;border-bottom:4px solid #eee; max-width:600px}
 h2{font-size:25px;margin-bottom:9px;border-bottom:2px solid #eee;}
 h3{font-size:18px;margin-bottom:9px;}
 h4{font-size:15px;margin-bottom:3px;}
 h5{font-size:12px;font-weight:normal;margin-bottom:3px;}
 .subheader{color:#777;font-weight:300;margin-bottom:24px;}
-p{line-height:1.3em;margin:1em 0;}
+p{line-height:1.3em;margin:1em 0;max-width:600px;font-weight:600}
 p img{margin:0;}
-p.lead{font-size:18px;font-size:1.8rem;line-height:1.5;}
 li>p:first-child{margin-top:0;}
 li>p:last-child{margin-bottom:0;}
-ul li,ol li{position:relative;padding:4px 0 4px 14px;}ul li ol,ol li ol,ul li ul,ol li ul{margin-left:20px;}
-ul li:before,ol li:before{position:absolute;top:8px;left:0;content:"►";color:#ccc;font-size:10px;margin-right:5px;}
->ol{counter-reset:section;}>ol li:before{color:#ccc;font-size:13px;}
->ol>li{padding:6px 0 4px 20px;counter-reset:chapter;}>ol>li:before{content:counter(section) ".";counter-increment:section;}
->ol>li>ol>li{padding:6px 0 4px 30px;counter-reset:item;}>ol>li>ol>li:before{content:counter(section) "." counter(chapter);counter-increment:chapter;}
->ol>li>ol>li>ol>li{padding:6px 0 4px 40px;}>ol>li>ol>li>ol>li:before{content:counter(section) "." counter(chapter) "." counter(item);counter-increment:item;}
+ul li,ol li{position:relative;padding:4px 0 4px 14px;}
+ul li ol,ol li ol,ul li ul,ol li ul{margin-left:20px;}
  em, i{font-style:italic;line-height:inherit;}
  strong, b{font-weight:bold;line-height:inherit;}
  small{font-size:60%;line-height:inherit;}
@@ -129,3 +124,4 @@ aside a[href^="http"]:after,.doc a[href^="http"]:after{content:url(/assets/image
 .srclink{padding-top: 15px}
 .srclink a{padding:2px;border:2px double;font-size:18px;font-weight:bold;color:#222222}
 .srclink img, .srclink span{display:inline-block;padding-left:4px;padding-right:4px}
+input[type=submit]{font-size: 15px;font-weight:600}
