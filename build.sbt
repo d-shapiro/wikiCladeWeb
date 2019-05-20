@@ -1,6 +1,6 @@
 name := "wikiCladeWeb"
  
-version := "1.0.2"
+version := "1.1.0"
       
 lazy val `wikicladeweb` = (project in file(".")).enablePlugins(PlayScala)
 
@@ -14,6 +14,6 @@ scalaVersion := "2.12.2"
 
 libraryDependencies ++= Seq( jdbc , ehcache , ws , specs2 % Test , guice )
 
-libraryDependencies += "com.github.d-shapiro" % "wikiClade" % "1.0.7"
+libraryDependencies += "com.github.d-shapiro" % "wikiClade" % "1.1.1"
 
 unmanagedResourceDirectories in Test <+=  baseDirectory ( _ /"target/web/public/test" )  

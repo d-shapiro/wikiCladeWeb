@@ -6,7 +6,8 @@
     <h1>WikiClade</h1>
     @form(action = routes.HomeController.wikiCladeFormPost()) {
         @textarea(userForm("inputs"))
-        @inputText(userForm("verbosity"))
+        @select(userForm("verbosity"),
+            Seq("complete" -> "complete", "normal" -> "normal", "less" -> "less", "minimal" -> "minimal"))
 
         <input type="submit" value="Generate Cladogram">
     }
@@ -14,8 +15,6 @@
     <p>
         This tool scrapes Wikipedia to generate a cladogram (branching diagram used to illustrate evolutionary
         relationships) linking the input organisms. Verbosity affects how many intermediate clades are displayed.
-        At 0, only the target organisms and branching points will be displayed. At 100,
-        all known intermediate clades will be displayed.
     </p>
     <div class="srclink"><a href="https://github.com/d-shapiro/wikiClade"><img src="@routes.Assets.versioned("images/githubmark.png")" height="18px"><span> Source</span></a></div>
     <div class="srclink"><a href="https://github.com/d-shapiro/wikiCladeWeb"><img src="@routes.Assets.versioned("images/githubmark.png")" height="18px"><span> Website Source</span></a></div>
