@@ -14,6 +14,8 @@ import play.twirl.api.Html
 class HomeController @Inject()(cc: ControllerComponents) extends AbstractController(cc) with play.api.i18n.I18nSupport {
   val logger: Logger = Logger(this.getClass)
 
+  val paraphylyNote = "* Input groups marked with an asterisk may be paraphyletic/polyphyletic, meaning that their members dont share an immediate common ancestor. The clade that such a group has been associated with is the smallest one that contains all members of the group (although it also contains organisms that are not part of the group)."
+
   /**
    * Create an Action to render an HTML page with a welcome message.
    * The configuration in the `routes` file means that this method
@@ -44,7 +46,8 @@ class HomeController @Inject()(cc: ControllerComponents) extends AbstractControl
         logger.info("Generating cladogram")
         val svg = cladograms.Main.svg(inpList, Some(formData.verbosity))
         logger.info("Generated cladogram")
-        Ok(views.html.cladogram(Html(svg)))
+        val footnote = if (svg.contains("*")) paraphylyNote else ""
+        Ok(views.html.cladogram(Html(svg))(Html(footnote)))
       }
     )
   }
