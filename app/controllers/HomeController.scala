@@ -14,7 +14,7 @@ import play.twirl.api.Html
 class HomeController @Inject()(cc: ControllerComponents) extends AbstractController(cc) with play.api.i18n.I18nSupport {
   val logger: Logger = Logger(this.getClass)
 
-  val paraphylyNote = "* Input groups marked with an asterisk may be paraphyletic/polyphyletic, meaning that their members dont share an immediate common ancestor. The clade that such a group has been associated with is the smallest one that contains all members of the group (although it also contains organisms that are not part of the group)."
+  val paraphylyNote = "* Input groups marked with an asterisk may be paraphyletic/polyphyletic, meaning that their members don't share an immediate common ancestor. The clade that such a group has been associated with is the smallest one that contains all members of the group (although it also contains organisms that are not part of the group)."
 
   /**
    * Create an Action to render an HTML page with a welcome message.
