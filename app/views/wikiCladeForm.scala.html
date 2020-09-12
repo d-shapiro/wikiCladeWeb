@@ -3,6 +3,7 @@
 @(userForm: Form[WikiCladeForm])(implicit messages: Messages)
 
 @main("WikiClade") {
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <h1>WikiClade</h1>
     @form(action = routes.HomeController.wikiCladeFormPost()) {
         @textarea(userForm("inputs"))
