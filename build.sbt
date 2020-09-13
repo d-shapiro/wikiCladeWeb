@@ -1,6 +1,6 @@
 name := "wikiCladeWeb"
  
-version := "1.2.0"
+version := "1.2.1"
       
 lazy val `wikicladeweb` = (project in file(".")).enablePlugins(PlayScala)
 

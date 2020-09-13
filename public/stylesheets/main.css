@@ -125,3 +125,4 @@ aside a[href^="http"]:after,.doc a[href^="http"]:after{content:url(/assets/image
 .srclink a{padding:2px;border:2px double;font-size:18px;font-weight:bold;color:#222222}
 .srclink img, .srclink span{display:inline-block;padding-left:4px;padding-right:4px}
 input[type=submit]{font-size: 15px;font-weight:600}
+textarea {max-width: 550px}

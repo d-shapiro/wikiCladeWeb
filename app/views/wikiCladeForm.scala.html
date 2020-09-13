@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <h1>WikiClade</h1>
     @form(action = routes.HomeController.wikiCladeFormPost()) {
-        @textarea(userForm("inputs"))
+        @textarea(userForm("inputs"), args = 'rows -> 8, 'style -> "width:90%")
         @select(userForm("verbosity"),
             Seq("complete" -> "complete", "normal" -> "normal", "less" -> "less", "minimal" -> "minimal"))
 
